@@ -21,8 +21,7 @@ export default {
   name: "home",
   computed: {
     welcome() {
-      //   return this.$store.getters.welcome;
-      //   return "ok";
+      return this.$store.getters.welcome;
     }
   }
 };
