@@ -33,7 +33,8 @@ export default {
       form: {
         email: "",
         password: ""
-      }
+      },
+      error: null
     };
   },
   methods: {
@@ -41,11 +42,11 @@ export default {
       this.$store.dispatch("login");
 
       login(this.$data.form)
-        .then(res => {
+        .then(function(res) {
           this.$store.commit("loginSuccess", res);
           this.$router.push({ path: "/" });
         })
-        .catch(error => {
+        .catch(function(error) {
           this.$store.commit("loginFailed", { error });
         });
     }
