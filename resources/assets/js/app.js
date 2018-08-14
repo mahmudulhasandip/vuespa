@@ -17,7 +17,7 @@ const store = new Vuex.Store(StoreData);
 // router
 const router = new VueRouter({
     routes,
-    mood: "history"
+    mode: "history"
 });
 
 router.beforeEach((to, from, next) => {

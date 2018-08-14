@@ -1,7 +1,5 @@
 import Home from './components/Home.vue';
-import {
-    login
-} from './components/auth/Login.vue';
+import login from './components/auth/Login.vue';
 
 export const routes = [{
         path: '/',

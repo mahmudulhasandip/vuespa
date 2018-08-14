@@ -42,11 +42,11 @@ export default {
       this.$store.dispatch("login");
 
       login(this.$data.form)
-        .then(function(res) {
+        .then((res) => {
           this.$store.commit("loginSuccess", res);
           this.$router.push({ path: "/" });
         })
-        .catch(function(error) {
+        .catch((error) => {
           this.$store.commit("loginFailed", { error });
         });
     }
